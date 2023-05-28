@@ -1,10 +1,12 @@
-fetch('http://localhost:3000')
+const url='https://backend-lddr.onrender.com';
+
+fetch(url)
   .then(response => response.text())
   .then(data => {
     console.log(data); // Display the response from the server
   });
 
-  fetch('http://localhost:3000/collections')
+  fetch(url+'/collections')
   .then(response => response.json())
   .then(data => {
     console.log(data);
@@ -14,41 +16,11 @@ fetch('http://localhost:3000')
     console.error('Error:', error);
   });
 
-// Find all documents
-// const documents = await collection.find({}).toArray();
-// console.log(documents);
-
-// // Find documents that match a specific condition
-// const filteredDocuments = await collection.find({ age: { $gt: 25 } }).toArray();
-// console.log(filteredDocuments);
-// Query object
-// const query = {
-//   // Define your query parameters here
-//   text: 'כאבדה'
-// };
-
-// // Encode the query object as a URL query string
-// const queryParams = new URLSearchParams(query).toString();
-
-// // Make a GET request to the server endpoint with the query parameters
-// fetch(`http://localhost:3000/query?${queryParams}`)
-//   .then(response => response.text())
-//   .then(data => {
-//     // Handle the received JSON data
-//     console.log(data); // Display the received JSON data in the console
-//     // Do further processing with the data as needed
-//   })
-//   .catch(error => {
-//     console.error('Error:', error);
-//     // Handle the error case
-//   });
-
-
 
   function fetchData(searchTerm) {
     return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
-        xhr.open('GET', `http://localhost:3000/query?searchTerm=${searchTerm}`);
+        xhr.open('GET', url+`/query?searchTerm=${searchTerm}`);
         xhr.onreadystatechange = () => {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
@@ -75,7 +47,7 @@ function handleSubmit(event) {
             const resultCount = data.length;
             getVideo(data)
             const resultCountElement = document.getElementById('resultCount');
-            resultCountElement.textContent = `Number of results: ${resultCount}`;
+            resultCountElement.textContent = ` מצאנו ${resultCount} תוצאות  `;
         })
         .catch(error => {
             console.error('Error:', error);
@@ -97,39 +69,40 @@ function getVideo(lst){
   videosContainer.innerHTML = ''; // Clear previous results
   for (item of lst){
     console.log(item.title);
-    // Make an HTTP GET request to the YouTube Data API
-    fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&part=snippet&q=${item.title}&maxResults=1&type=video`)
-    .then(response => response.json())
-    .then(data => {
-      
-        const videos = data.items;
-    
-        if (videos.length === 0) {
-            videosContainer.textContent = 'No videos found.';
-            return;
     }
+    // Make an HTTP GET request to the YouTube Data API
+//     fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&part=snippet&q=${item.title}&maxResults=1&type=video`)
+//     .then(response => response.json())
+//     .then(data => {
+      
+//         const videos = data.items;
+    
+//         if (videos.length === 0) {
+//             videosContainer.textContent = 'No videos found.';
+//             return;
+//     }
   
-    videos.forEach(video => {
-      const { id: { videoId }, snippet: { title } } = video;
+//     videos.forEach(video => {
+//       const { id: { videoId }, snippet: { title } } = video;
   
-      // Create a <div> element to wrap the iframe
-      const videoWrapper = document.createElement('div');
-      videoWrapper.classList.add('video-wrapper');
+//       // Create a <div> element to wrap the iframe
+//       const videoWrapper = document.createElement('div');
+//       videoWrapper.classList.add('video-wrapper');
 
-      // Create an <iframe> element with the video player
-      const iframe = document.createElement('iframe');
-      iframe.src = `https://www.youtube.com/embed/${videoId}`;
-      iframe.width = '100%';
-      iframe.height = '100%';
+//       // Create an <iframe> element with the video player
+//       const iframe = document.createElement('iframe');
+//       iframe.src = `https://www.youtube.com/embed/${videoId}`;
+//       iframe.width = '100%';
+//       iframe.height = '100%';
 
-      // Append the <iframe> element to the video wrapper
-      videoWrapper.appendChild(iframe);
+//       // Append the <iframe> element to the video wrapper
+//       videoWrapper.appendChild(iframe);
 
-      // Append the video wrapper to the videos container
-      videosContainer.appendChild(videoWrapper);
-    });
-  })
-  .catch(error => console.error('Error:', error));
-}
+//       // Append the video wrapper to the videos container
+//       videosContainer.appendChild(videoWrapper);
+//     });
+//   })
+//   .catch(error => console.error('Error:', error));
+// }
   
 }
