@@ -1,4 +1,5 @@
 const url='https://backend-lddr.onrender.com';
+// const url='http://localhost:3000';
 
 fetch(url)
   .then(response => response.text())
@@ -9,7 +10,7 @@ fetch(url)
   fetch(url+'/collections')
   .then(response => response.json())
   .then(data => {
-    console.log(data);
+    // console.log(data);
     
   })
   .catch(error => {
@@ -39,19 +40,25 @@ fetch(url)
 function handleSubmit(event) {
   event.preventDefault();
   console.log("clickkk");
-    const searchTerm = document.getElementById('search-input').value;
-    fetchData(searchTerm)
-        .then(data => {
-            // Process and display the data
-            console.log(data);
-            const resultCount = data.length;
-            getVideo(data)
-            const resultCountElement = document.getElementById('resultCount');
-            resultCountElement.textContent = ` מצאנו  ${resultCount} תוצאות אבל זו התוצאה המתאימה ביותר!  `;
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+  const searchTerm = document.getElementById('search-input').value;
+  fetchData(searchTerm)
+    .then(data => {
+      if (data.length > 0) {
+        console.log(data);
+        const resultCount = data.length;
+        getVideo(data);
+        const resultCountElement = document.getElementById('resultCount');
+        resultCountElement.textContent = `מצאנו ${resultCount} תוצאות אבל זו התוצאה המתאימה ביותר!`;
+      } else {
+        const resultCountElement = document.getElementById('resultCount');
+        resultCountElement.textContent = 'שומו שמיים לא נמצאו תוצאות';
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      const resultCountElement = document.getElementById('resultCount');
+      resultCountElement.textContent = 'שגיאה בביצוע הבקשה.';
+    });
 }
 
 // Add event listener to the form submit button
