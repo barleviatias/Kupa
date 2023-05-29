@@ -47,7 +47,7 @@ function handleSubmit(event) {
             const resultCount = data.length;
             getVideo(data)
             const resultCountElement = document.getElementById('resultCount');
-            resultCountElement.textContent = ` מצאנו ${resultCount} תוצאות  `;
+            resultCountElement.textContent = ` מצאנו  ${resultCount} תוצאות אבל זו התוצאה המתאימה ביותר!  `;
         })
         .catch(error => {
             console.error('Error:', error);
@@ -66,7 +66,7 @@ form.addEventListener('submit', handleSubmit);
 function getVideo(lst){
   const videosContainer = document.getElementById('videosContainer');
   videosContainer.innerHTML = ''; // Clear previous results
-  for (item of lst){
+    item=lst[0];
     console.log(item.title);
     
   
@@ -90,4 +90,3 @@ function getVideo(lst){
   
 }
 
-}
