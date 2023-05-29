@@ -63,46 +63,31 @@ form.addEventListener('submit', handleSubmit);
 
 
 // Replace 'YOUR_API_KEY' with your actual YouTube API key
-const apiKey = 'AIzaSyAfvktGRnTPT-aq4CfjmM3zi1jWHxqojY4';
 function getVideo(lst){
   const videosContainer = document.getElementById('videosContainer');
   videosContainer.innerHTML = ''; // Clear previous results
   for (item of lst){
     console.log(item.title);
-    }
-    // Make an HTTP GET request to the YouTube Data API
-//     fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&part=snippet&q=${item.title}&maxResults=1&type=video`)
-//     .then(response => response.json())
-//     .then(data => {
-      
-//         const videos = data.items;
     
-//         if (videos.length === 0) {
-//             videosContainer.textContent = 'No videos found.';
-//             return;
-//     }
   
-//     videos.forEach(video => {
-//       const { id: { videoId }, snippet: { title } } = video;
+      // Create a <div> element to wrap the iframe
+      const videoWrapper = document.createElement('div');
+      videoWrapper.classList.add('video-wrapper');
+
+      // Create an <iframe> element with the video player
+      const iframe = document.createElement('iframe');
+      video_id = item.url.split('watch?v=')[1]
+      iframe.src = `https://www.youtube.com/embed/${video_id}`;
+      iframe.width = '100%';
+      iframe.height = '100%';
+
+      // Append the <iframe> element to the video wrapper
+      videoWrapper.appendChild(iframe);
+
+      // Append the video wrapper to the videos container
+      videosContainer.appendChild(videoWrapper);
+
   
-//       // Create a <div> element to wrap the iframe
-//       const videoWrapper = document.createElement('div');
-//       videoWrapper.classList.add('video-wrapper');
+}
 
-//       // Create an <iframe> element with the video player
-//       const iframe = document.createElement('iframe');
-//       iframe.src = `https://www.youtube.com/embed/${videoId}`;
-//       iframe.width = '100%';
-//       iframe.height = '100%';
-
-//       // Append the <iframe> element to the video wrapper
-//       videoWrapper.appendChild(iframe);
-
-//       // Append the video wrapper to the videos container
-//       videosContainer.appendChild(videoWrapper);
-//     });
-//   })
-//   .catch(error => console.error('Error:', error));
-// }
-  
 }
