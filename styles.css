@@ -4,6 +4,7 @@ body {
   margin: 0;
   height: 80vh;
   padding: 20px;
+  margin-bottom: 60px; /* Add bottom margin to accommodate the footer */
 }
 
 h1 {
@@ -100,6 +101,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
+  padding-bottom: 60px;
 }
 
 .video-wrapper {
@@ -127,7 +129,10 @@ footer {
   color: #fff; */
   font-size: 22px;
 }
-
+.context{
+  font-style: italic;
+  font-size: 0.9rem;
+}
 /* Responsive settings for mobile devices */
 @media screen and (max-width: 768px) {
   #videosContainer {

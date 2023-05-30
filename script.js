@@ -92,7 +92,8 @@ function getVideo(data) {
        videoWrapper.classList.add('video-frame');
       // Create a <h2> element for the title
       const titleElement = document.createElement('p');
-      titleElement.textContent = item.context; // Set the title from item.context
+      titleElement.classList.add('context');
+      titleElement.textContent = '"'+item.context+'"'; // Set the title from item.context
 
       // Create an <iframe> element with the video player
       const iframe = document.createElement('iframe');
