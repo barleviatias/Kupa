@@ -94,7 +94,7 @@ function getVideo(data) {
 
       // Create an <iframe> element with the video player
       const iframe = document.createElement('iframe');
-      const video_id = item.youtube_url.split('watch?v=')[1];
+      const video_id = item.url.split('watch?v=')[1];
       iframe.src = `https://www.youtube.com/embed/${video_id}`;
       iframe.width = '100%';
       iframe.height = '100%';
