@@ -8,6 +8,7 @@ fetch(url)
     console.log(data); // Display the response from the server
   });
 
+  
   fetch(url+'/collections')
   .then(response => response.json())
   .then(data => {
