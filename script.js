@@ -20,7 +20,15 @@ fetch(url)
     console.error('Error:', error);
   });
 
-
+  function showLoader() {
+    const loader = document.getElementById('loader');
+    loader.style.display = 'block';
+  }
+  
+  function hideLoader() {
+    const loader = document.getElementById('loader');
+    loader.style.display = 'none';
+  }
   function fetchData(searchTerm) {
     return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
@@ -42,6 +50,7 @@ fetch(url)
 // Function to handle form submission
 function handleSubmit(event) {
   event.preventDefault();
+  showLoader();
   console.log("clickkk");
   const searchTerm = document.getElementById('search-input').value;
   fetchData(searchTerm)
@@ -57,11 +66,13 @@ function handleSubmit(event) {
         const resultCountElement = document.getElementById('resultCount');
         resultCountElement.textContent = 'שומו שמיים לא נמצאו תוצאות';
       }
+      hideLoader();
     })
     .catch(error => {
       console.error('Error:', error);
       const resultCountElement = document.getElementById('resultCount');
       resultCountElement.textContent = 'שגיאה בביצוע הבקשה.';
+      hideLoader();
     });
 }
 
