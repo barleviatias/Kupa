@@ -43,7 +43,7 @@ h1 {
 }
 
 #search-button:hover {
-  background-color: #a21427;
+  background-color: #CA1B31;
 }
 
 #search-results {
@@ -58,7 +58,11 @@ h1 {
   margin: 0;
   padding: 5px;
 }
-
+#resultCount{
+  border: solid;
+    padding: 10px;
+    border-color: #a21427;
+}
 footer {
   display: flex;
   text-align: center;
@@ -76,6 +80,7 @@ footer {
 .footer-icons {
   display: inline-block;
   margin: 0 10px;
+  
 }
 
 .footer-icons a {
