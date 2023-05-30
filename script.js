@@ -1,6 +1,7 @@
 // const url='https://backend-lddr.onrender.com';
 // const url='http://localhost:3000';
 const url='https://kupa-python-server.onrender.com';
+// const url='http://127.0.0.1:5000';
 
 fetch(url)
   .then(response => response.text())
@@ -50,7 +51,8 @@ function handleSubmit(event) {
         const resultCount = Object.keys(data).length;
         getVideo(data);
         const resultCountElement = document.getElementById('resultCount');
-        resultCountElement.textContent = `מצאנו ${resultCount} תוצאות אבל זו התוצאה המתאימה ביותר!`;
+        resultCountElement.textContent = `בוסגה מצאנו  ${resultCount} תוצאות!`;
+        resultCountElement.style.visibility='visible';
       } else {
         const resultCountElement = document.getElementById('resultCount');
         resultCountElement.textContent = 'שומו שמיים לא נמצאו תוצאות';
