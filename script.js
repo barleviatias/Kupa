@@ -1,5 +1,6 @@
-const url='https://backend-lddr.onrender.com';
+// const url='https://backend-lddr.onrender.com';
 // const url='http://localhost:3000';
+const url='https://kupa-python-server.onrender.com';
 
 fetch(url)
   .then(response => response.text())
@@ -21,7 +22,7 @@ fetch(url)
   function fetchData(searchTerm) {
     return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
-        xhr.open('GET', url+`/query?searchTerm=${searchTerm}`);
+        xhr.open('GET', url+`/search?q=${searchTerm}`);
         xhr.onreadystatechange = () => {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
@@ -43,9 +44,9 @@ function handleSubmit(event) {
   const searchTerm = document.getElementById('search-input').value;
   fetchData(searchTerm)
     .then(data => {
-      if (data.length > 0) {
+      if (Object.keys(data).length > 0) {
         console.log(data);
-        const resultCount = data.length;
+        const resultCount = Object.keys(data).length;
         getVideo(data);
         const resultCountElement = document.getElementById('resultCount');
         resultCountElement.textContent = `מצאנו ${resultCount} תוצאות אבל זו התוצאה המתאימה ביותר!`;
@@ -70,30 +71,43 @@ form.addEventListener('submit', handleSubmit);
 
 
 // Replace 'YOUR_API_KEY' with your actual YouTube API key
-function getVideo(lst){
+function getVideo(data) {
   const videosContainer = document.getElementById('videosContainer');
   videosContainer.innerHTML = ''; // Clear previous results
-    item=lst[0];
-    console.log(item.title);
-    
-  
+
+  for (const key in data) {
+    if (data.hasOwnProperty(key)) {
+      const item = data[key];
+      console.log(item.episode_name);
+
       // Create a <div> element to wrap the iframe
       const videoWrapper = document.createElement('div');
       videoWrapper.classList.add('video-wrapper');
 
+       // Create a <div> element to wrap the iframe
+       const videoFrame = document.createElement('div');
+       videoWrapper.classList.add('video-frame');
+      // Create a <h2> element for the title
+      const titleElement = document.createElement('p');
+      titleElement.textContent = item.context; // Set the title from item.context
+
       // Create an <iframe> element with the video player
       const iframe = document.createElement('iframe');
-      video_id = item.url.split('watch?v=')[1]
+      const video_id = item.url.split('watch?v=')[1];
       iframe.src = `https://www.youtube.com/embed/${video_id}`;
       iframe.width = '100%';
       iframe.height = '100%';
 
+      // Append the title element to the video wrapper
       // Append the <iframe> element to the video wrapper
       videoWrapper.appendChild(iframe);
-
+      
       // Append the video wrapper to the videos container
-      videosContainer.appendChild(videoWrapper);
-
-  
+      videoFrame.appendChild(videoWrapper);
+      videoFrame.appendChild(titleElement);
+      videosContainer.appendChild(videoFrame);
+    }
+  }
 }
+
 
