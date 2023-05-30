@@ -10,10 +10,12 @@ fetch(url)
   });
 
   
-  fetch(url+'/collections')
+  fetch(url+'/counter')
   .then(response => response.json())
   .then(data => {
-    // console.log(data);
+    console.log(data);
+    const elCounter = document.getElementById('counter');
+    elCounter.textContent = `בוסגה בוצעו עד עכשיו ${data.counter} חיפושים`;
     
   })
   .catch(error => {
