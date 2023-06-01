@@ -1,7 +1,7 @@
 // const url='https://backend-lddr.onrender.com';
 // const url='http://localhost:3000';
-const url='https://kupa-python-server.onrender.com';
-// const url='http://127.0.0.1:5000';
+// const url='https://kupa-python-server.onrender.com';
+const url='http://127.0.0.1:5000';
 
 fetch(url)
   .then(response => response.text())
@@ -44,7 +44,7 @@ fetch(url)
 
                 // Open the XHR request with the IP address and search term in the headers
                 xhr.open('GET', url + `/search?q=${searchTerm}`);
-                xhr.setRequestHeader('X-Search-IP', ipAddress);
+                // xhr.setRequestHeader('X-Search-IP', ipAddress);
 
                 xhr.onreadystatechange = () => {
                     if (xhr.readyState === 4) {
