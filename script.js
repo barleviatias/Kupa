@@ -3,11 +3,11 @@
 const url='https://kupa-python-server.onrender.com';
 // const url='http://127.0.0.1:5000';
 
-fetch(url)
-  .then(response => response.text())
-  .then(data => {
-    console.log(data); // Display the response from the server
-  });
+// fetch(url)
+//   .then(response => response.text())
+//   .then(data => {
+//     // console.log(data); // Display the response from the server
+//   });
 
   
   fetch(url+'/counter')
