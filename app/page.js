@@ -54,9 +54,11 @@ export default function Home() {
       <main className="container mx-auto py-10 min-h-[90vh] rtl">
         <div className="flex flex-col items-center">
           <Image src={Logo} alt="Logo" className="mb-4"  width={200} height={200}/>
-          {resultCount > 0 && (
-            <p className=" text-slate-500 mb-1">בוסגה בוצעו עד עכשיו {resultCount} חיפושים</p>
-          )}
+         {resultCount > 0 ? (
+           <p className="text-slate-500 mb-1">בוסגה בוצעו עד עכשיו {resultCount} חיפושים</p>
+         ) : (
+           <p className="text-slate-500 mb-1">יום בנעימים</p>
+         )}
           <form onSubmit={handleSubmit} className="mb-8">
             <input
               type="text"
@@ -77,6 +79,7 @@ export default function Home() {
           {searchResults > 0 && (
             <p className="mb-8 text-black">בוסגה מצאנו {searchResults} תוצאות!</p>
           )}
+
         </div>
         {loading ? (
         <Loader />
