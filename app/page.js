@@ -53,7 +53,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-100 rtl">
 
-      <main className="container mx-auto py-10 min-h-[90vh] rtl">
+      <main className="container mx-auto py-10 min-h-[90vh] rtl px-3 sm:px-2
+      ">
         <div className="flex flex-col items-center">
           <Image src={Logo} alt="Logo" className="mb-4"  width={200} height={200}/>
          {resultCount > 0 ? (
@@ -67,8 +68,7 @@ export default function Home() {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="מנוע חיפוש משפטים מעונות 1-3"
-              className="px-4 py-2 border min-w-[300px] text-center border-gray-300 rounded-lg focus:outline-none focus:ring-2 text-gray-800 focus:ring-custom-red"
-              required
+              className="px-4 py-2 border text-center border-gray-300 rounded-lg focus:outline-none focus:ring-2 text-gray-800 focus:ring-custom-red min-w-[250px] md:min-w-[500px]"              required
             />
             <button
               type="submit"
