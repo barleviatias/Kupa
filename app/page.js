@@ -4,6 +4,8 @@ import { useState ,useEffect} from 'react';
 import Logo from '@/img/kupa_logo.png';
 import Image from 'next/image';
 import Loader from './components/loader';
+import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css'
+
 export default function Home() {
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
