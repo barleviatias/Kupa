@@ -5,6 +5,10 @@ const DB_NAME = 'test';
 
 export const GET = async (request) => {
   try {
+    // Access the request object to make the route dynamic
+    const { url } = request;
+    console.log('Request URL:', url);
+
     await mongoose.connect(MONGO_URI, {
       dbName: DB_NAME,
     });
@@ -37,6 +41,3 @@ export const GET = async (request) => {
     });
   }
 };
-
-export const dynamic = 'auto'
-// 'auto' | 'force-dynamic' | 'error' | 'force-static'
