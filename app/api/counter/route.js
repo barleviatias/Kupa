@@ -3,7 +3,13 @@ import mongoose from 'mongoose';
 const MONGO_URI = process.env.MONGO_URI;
 const DB_NAME = 'test';
 
-export async function GET(request) {
+export const config = {
+  api: {
+    externalResolver: true,
+  },
+};
+
+export async function GET() {
   try {
     await mongoose.connect(MONGO_URI, {
       dbName: DB_NAME,
