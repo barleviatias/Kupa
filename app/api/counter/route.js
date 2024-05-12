@@ -3,25 +3,14 @@ import mongoose from 'mongoose';
 const MONGO_URI = process.env.MONGO_URI;
 const DB_NAME = 'test';
 
-export const config = {
-  api: {
-    externalResolver: true,
-  },
-};
-
-export async function GET() {
+export const GET = async (request) => {
   try {
     await mongoose.connect(MONGO_URI, {
       dbName: DB_NAME,
     });
 
-    // Check if the connection is successful
-    const db = mongoose.connection.db;
-    const collection = db.collection('log');
-
-    // Get the document count directly
+    const collection = mongoose.connection.db.collection('log');
     const documentCount = await collection.countDocuments();
-
     console.log('Document count:', documentCount);
 
     await mongoose.disconnect();
@@ -47,4 +36,10 @@ export async function GET() {
       },
     });
   }
-}
+};
+
+export const config = {
+  api: {
+    externalResolver: true,
+  },
+};
