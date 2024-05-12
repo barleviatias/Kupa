@@ -11,15 +11,16 @@ export default function Home() {
   const [resultCount, setResultCount] = useState('');
   const [videosData, setVideosData] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
-
+  const fetchData = async () => {
+    const response = await fetch('/api/results', {
+      method: 'GET',
+    });
+    const data = await response.json();
+    setResultCount(data.documentCount);
+    console.log('run');
+    console.log(data.documentCount);
+  };
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch('/api/results');
-      const data = await response.json();
-      setResultCount(data.documentCount);
-      console.log('run');
-      console.log(data);
-    };
     fetchData();
   }, []); // Empty dependency array
   function convertToList(objectOfObjects) {
