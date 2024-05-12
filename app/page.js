@@ -35,7 +35,7 @@ export default function Home() {
     if (response.ok) {
       try {
         const data = await response.json();
-        console.log('Received data:', data);
+        // console.log('Received data:', data);
         setSearchResults(data.length);
         setVideosData(convertToList(data));
         // console.log(videosData);

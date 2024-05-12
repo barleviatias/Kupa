@@ -18,6 +18,13 @@ export async function GET(request) {
     const q = searchParams.get('q');
     console.log('q:', q);
 
+    const logCollection = db.collection('log');
+    const searchData = {
+      query: q,
+      timestamp: new Date(),
+    };
+    await logCollection.insertOne(searchData);
+
     const regex = new RegExp(q, 'i');
     const documents = await collection.find({ script: regex }).toArray();
 
