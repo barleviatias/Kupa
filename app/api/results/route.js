@@ -7,8 +7,6 @@ export async function GET(request) {
   try {
     await mongoose.connect(MONGO_URI, {
       dbName: DB_NAME,
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
     });
 
     // Check if the connection is successful

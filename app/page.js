@@ -1,5 +1,4 @@
 "use client"
-import Head from 'next/head';
 import { useState ,useEffect} from 'react';
 import Logo from '@/img/kupa_logo.png';
 import Image from 'next/image';
@@ -18,10 +17,11 @@ export default function Home() {
       const response = await fetch('/api/results');
       const data = await response.json();
       setResultCount(data.documentCount);
+      console.log('run');
       console.log(data);
     };
     fetchData();
-  })
+  }, []); // Empty dependency array
   function convertToList(objectOfObjects) {
     return Object.values(objectOfObjects);
   }
