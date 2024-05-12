@@ -8,8 +8,6 @@ export async function GET(request) {
   try {
     await mongoose.connect(MONGO_URI, {
       dbName: DB_NAME,
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
     });
 
     const db = mongoose.connection.db;
