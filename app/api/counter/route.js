@@ -38,8 +38,5 @@ export const GET = async (request) => {
   }
 };
 
-export const config = {
-  api: {
-    externalResolver: true,
-  },
-};
+export const dynamic = 'auto'
+// 'auto' | 'force-dynamic' | 'error' | 'force-static'
