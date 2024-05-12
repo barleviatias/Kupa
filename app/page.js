@@ -12,7 +12,7 @@ export default function Home() {
   const [videosData, setVideosData] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
   const fetchData = async () => {
-    const response = await fetch('/api/results', {
+    const response = await fetch('/api/counter', {
       method: 'GET',
     });
     const data = await response.json();
