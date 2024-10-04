@@ -12,6 +12,8 @@ export default function Home() {
 	const [videosData, setVideosData] = useState([]);
 	const [searchResults, setSearchResults] = useState([]);
 	const [expandedContext, setExpandedContext] = useState(null);
+  const [hasSearched, setHasSearched] = useState(false);  // New state variable
+
 
 	const fetchData = async () => {
 		const response = await fetch('/api/counter', {
@@ -54,6 +56,7 @@ export default function Home() {
 
 	const handleSubmit = async (event) => {
 		setLoading(true);
+		setHasSearched(true);  // Set this to true when a search is performed
 		event.preventDefault();
 		const response = await fetch(`/api/search?q=${searchTerm}`, {
 			method: 'GET',
@@ -122,7 +125,7 @@ export default function Home() {
 				</div>
 				{loading ? (
 					<Loader />
-				) : videosData.length === 0 ? (
+				) : hasSearched &&videosData.length === 0 ? (
 					<div className="text-center mt-8">
 						<p className="text-xl font-bold text-custom-red">שומו שמיים אין תוצאות! אל חשש בואו ננסה שוב!</p>
 						<p className="mt-2 text-gray-600">נסה לחפש משהו אחר או לשנות את מילות החיפוש שלך.</p>

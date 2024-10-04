@@ -14,6 +14,7 @@ module.exports = {
       },
       colors: {
         'custom-red': '#CA1B31',
+        'hover-red': '#880a1a',
       },
     },
   },
