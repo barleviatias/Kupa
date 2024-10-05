@@ -42,19 +42,11 @@ export async function GET(request) {
 		const documents = await collection
 			.find({ script: flexibleRegex })
 			.toArray();
-		console.log('Number of documents found:', documents.length);
 
 		if (documents.length === 0) {
 			console.log(
 				'No documents found. Checking first 5 documents in collection:'
 			);
-			const sampleDocs = await collection.find().limit(5).toArray();
-			sampleDocs.forEach((doc, index) => {
-				console.log(`Document ${index + 1}:`);
-				console.log('Episode:', doc.episode_name);
-				console.log('Script preview:', doc.script.substring(0, 500));
-				console.log('---');
-			});
 		}
 
 		const results = documents

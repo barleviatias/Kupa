@@ -75,47 +75,49 @@ export default function Home() {
 					<Image
 						src={Logo}
 						alt="Logo"
-						className="mb-4"
+						className="mb-6"
 						width={200}
 						height={200}
 					/>
 					{resultCount > 0 ? (
-						<p className="text-slate-500 mb-1">
-							בוסגה בוצעו עד עכשיו {resultCount} חיפושים
+						<p className="text-slate-600 mb-4 text-lg font-medium">
+							בוסגה בוצעו עד עכשיו <span className="font-bold text-custom-red">{resultCount}</span> חיפושים
 						</p>
 					) : (
-						<p className="text-slate-500 mb-1">יום בנעימים</p>
+						<p className="text-slate-600 mb-4 text-lg font-medium">יום בנעימים</p>
 					)}
-					<form onSubmit={handleSubmit} className="mb-8">
-						<input
-							type="text"
-							value={searchTerm}
-							onChange={(e) => setSearchTerm(e.target.value)}
-							placeholder="מנוע חיפוש משפטים מעונות 1-4"
-							className="px-4 py-2 border text-center border-gray-300 rounded-lg focus:outline-none focus:ring-2 text-gray-800 focus:ring-custom-red min-w-[250px] md:min-w-[500px]"
-							required
-						/>
-						<button
-							type="submit"
-							className="px-4 py-2 ml-2 bg-custom-red text-white rounded-lg hover:bg-hover-red">
-							חפש לי
-						</button>
+					<form onSubmit={handleSubmit} className="mb-8 w-full max-w-2xl">
+						<div className="flex flex-col sm:flex-row items-center">
+							<input
+								type="text"
+								value={searchTerm}
+								onChange={(e) => setSearchTerm(e.target.value)}
+								placeholder="מנוע חיפוש משפטים מעונות 1-4"
+								className="px-4 py-3 border text-center border-gray-300 rounded-lg focus:outline-none focus:ring-2 text-gray-800 focus:ring-custom-red w-full sm:w-4/5 mb-4 sm:mb-0 sm:ml-2"
+								required
+							/>
+							<button
+								type="submit"
+								className="px-6 py-3 bg-custom-red text-white rounded-lg hover:bg-hover-red transition duration-300 w-full sm:w-1/5">
+								חפש לי
+							</button>
+						</div>
 					</form>
 
 					{searchResults > 0 && (
-						<p className="mb-8 text-black">
-							בוסגה מצאנו {searchResults} תוצאות!
+						<p className="mb-8 text-black text-xl font-semibold">
+							בוסגה מצאנו <span className="text-custom-red">{searchResults}</span> תוצאות!
 						</p>
 					)}
 				</div>
 				{loading ? (
 					<Loader />
 				) : hasSearched && resultsData.length === 0 ? (
-					<div className="text-center mt-8">
-						<p className="text-xl font-bold text-custom-red">
+					<div className="text-center mt-8 bg-white p-6 rounded-lg shadow-md">
+						<p className="text-2xl font-bold text-custom-red mb-3">
 							אין תוצאות! בוא ננסה שוב!
 						</p>
-						<p className="mt-2 text-gray-600">
+						<p className="text-lg text-gray-600">
 							נסה לחפש משהו אחר או לשנות את מילות החיפוש שלך.
 						</p>
 					</div>
@@ -124,25 +126,25 @@ export default function Home() {
 				) : null}
 			</main>
 
-			<footer className="bg-gray-800 text-white flex items-center py-4 bottom-0 min-h-[10vh]">
-				<div className="container mx-auto flex justify-center text-center">
-					<div className="flex justify-center items-center mb-2">
+			<footer className="bg-gray-800 text-white py-6 bottom-0 min-h-[10vh]">
+				<div className="container mx-auto flex flex-col items-center">
+					<div className="flex justify-center items-center mb-4">
 						<a
 							href="https://www.linkedin.com/in/bar-levi-atias-/"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="mx-2">
+							className="mx-3 text-2xl hover:text-custom-red transition duration-300">
 							<i className="fab fa-linkedin"></i>
 						</a>
 						<a
 							href="https://github.com/barleviatias"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="mx-2">
+							className="mx-3 text-2xl hover:text-custom-red transition duration-300">
 							<i className="fab fa-github"></i>
 						</a>
 					</div>
-					<p>All rights reserved &copy; 2023 Bar Levi Atias</p>
+					<p className="text-sm">All rights reserved &copy; 2023 Bar Levi Atias</p>
 					<script
 						async
 						defer
