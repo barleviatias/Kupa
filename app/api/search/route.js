@@ -83,8 +83,6 @@ export async function GET(request) {
           flexibleRegex.lastIndex = 0; // Reset regex lastIndex
 				}
 
-				// contexts = [...new Set(contexts)].slice(0, 3);
-
 				console.log('Matched document:');
 				console.log('Episode:', doc.episode_name);
 				console.log('Contexts found:', contexts.length);
