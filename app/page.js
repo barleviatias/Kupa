@@ -87,18 +87,18 @@ export default function Home() {
 						<p className="text-slate-600 mb-4 text-lg font-medium">יום בנעימים</p>
 					)}
 					<form onSubmit={handleSubmit} className="mb-8 w-full max-w-2xl">
-						<div className="flex flex-col sm:flex-row items-center">
+						<div className="flex flex-row sm:flex-row items-center">
 							<input
 								type="text"
 								value={searchTerm}
 								onChange={(e) => setSearchTerm(e.target.value)}
 								placeholder="מנוע חיפוש משפטים מעונות 1-4"
-								className="px-4 py-3 border text-center border-gray-300 rounded-lg focus:outline-none focus:ring-2 text-gray-800 focus:ring-custom-red w-full sm:w-4/5 mb-4 sm:mb-0 sm:ml-2"
+								className="px-4 py-3 border text-center border-gray-300 rounded-r-lg sm:rounded-lg focus:outline-none focus:ring-2 text-gray-800 focus:ring-custom-red w-full sm:w-4/5 sm:ml-2"
 								required
 							/>
 							<button
 								type="submit"
-								className="px-6 py-3 bg-custom-red text-white rounded-lg hover:bg-hover-red transition duration-300 w-full sm:w-1/5">
+								className="px-6 py-3 bg-custom-red text-white rounded-l-lg sm:rounded-lg hover:bg-hover-red transition duration-300 whitespace-nowrap sm:w-1/5">
 								חפש לי
 							</button>
 						</div>
