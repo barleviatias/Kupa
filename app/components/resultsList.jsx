@@ -86,25 +86,23 @@ export default function ResultsList({ resultsData, query }) {
       : (b.matches?.length || b.context?.length || 0) - (a.matches?.length || a.context?.length || 0)
         || Number(a.season_number) - Number(b.season_number) || Number(a.episode_number) - Number(b.episode_number));
   return <section aria-label="תוצאות החיפוש" className="max-w-6xl mx-auto">
-    <div className="mb-6 flex w-full flex-wrap items-center gap-3 rounded-2xl border border-gray-200 bg-white p-3 shadow-sm sm:w-fit sm:px-4">
-      <div className="flex items-center gap-2 border-l border-gray-200 pl-3 text-sm font-bold text-gray-800">
-        <span aria-hidden="true" className="h-2 w-2 rounded-full bg-custom-red" />
-        סינון תוצאות
+    <div className="mb-6 flex w-full flex-wrap items-center gap-2 rounded-2xl border border-gray-200 bg-white p-2 shadow-sm sm:w-fit sm:gap-3 sm:p-3">
+      <div className="grid w-full grid-cols-[minmax(0,2fr)_minmax(0,3fr)] gap-2 sm:flex sm:w-auto sm:gap-3">
+        <label className="flex min-w-0 items-center gap-2 rounded-xl bg-gray-50 px-2 py-2 text-sm font-medium text-gray-600 sm:px-3">
+          <span className="sr-only sm:not-sr-only">עונה</span>
+          <select value={season} onChange={event => setSeason(event.target.value)} className="w-full min-w-0 bg-transparent font-semibold text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-custom-red sm:w-auto sm:max-w-[8rem]">
+            <option value="all">כל העונות</option>
+            {seasons.map(value => <option key={value} value={value}>עונה {value}</option>)}
+          </select>
+        </label>
+        <label className="flex min-w-0 items-center gap-2 rounded-xl bg-gray-50 px-2 py-2 text-sm font-medium text-gray-600 sm:px-3">
+          <span className="sr-only sm:not-sr-only">מיון</span>
+          <select value={sort} onChange={event => setSort(event.target.value)} className="w-full min-w-0 bg-transparent font-semibold text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-custom-red sm:w-auto sm:max-w-[11rem]">
+            <option value="matches">הכי הרבה אזכורים</option>
+            <option value="episode">לפי סדר הפרקים</option>
+          </select>
+        </label>
       </div>
-      <label className="flex items-center gap-2 rounded-xl bg-gray-50 px-3 py-2 text-sm font-medium text-gray-600">
-        עונה
-        <select value={season} onChange={event => setSeason(event.target.value)} className="max-w-[8rem] bg-transparent font-semibold text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-custom-red">
-          <option value="all">כל העונות</option>
-          {seasons.map(value => <option key={value} value={value}>עונה {value}</option>)}
-        </select>
-      </label>
-      <label className="flex items-center gap-2 rounded-xl bg-gray-50 px-3 py-2 text-sm font-medium text-gray-600">
-        מיון
-        <select value={sort} onChange={event => setSort(event.target.value)} className="max-w-[11rem] bg-transparent font-semibold text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-custom-red">
-          <option value="matches">הכי הרבה אזכורים</option>
-          <option value="episode">לפי סדר הפרקים</option>
-        </select>
-      </label>
       <p role="status" className={season === 'all' ? 'sr-only' : 'text-sm font-medium text-custom-red'}>מוצגים {shown.length} מתוך {resultsData.length} פרקים</p>
     </div>
     <div className={`grid grid-cols-1 gap-6 ${shown.length === 1 ? 'max-w-3xl mx-auto' : 'lg:grid-cols-2'}`}>
