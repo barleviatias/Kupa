@@ -12,8 +12,9 @@ export const dynamic = 'force-dynamic'
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" dir="rtl">
-      <body className={inter.className}>{children}</body>
+    // Browser extensions can add attributes to these root elements before hydration.
+    <html lang="he" dir="rtl" suppressHydrationWarning>
+      <body className={inter.className} suppressHydrationWarning>{children}</body>
     </html>
   );
 }

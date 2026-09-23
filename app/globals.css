@@ -31,3 +31,18 @@ body {
     text-wrap: balance;
   }
 }
+
+.popular-searches-window { overflow: hidden; direction: ltr; padding: 4px; }
+.popular-searches-track { display: flex; width: max-content; animation: popular-searches-scroll 65s linear infinite; }
+.popular-searches-group { display: flex; align-items: center; gap: 12px; padding-inline-end: 12px; flex-shrink: 0; }
+.popular-searches-group a { white-space: nowrap; direction: rtl; }
+.popular-searches-window:hover .popular-searches-track,
+.popular-searches-window:active .popular-searches-track,
+.popular-searches-window:focus-within .popular-searches-track { animation-play-state: paused; }
+.popular-searches-window:focus-within { overflow-x: auto; }
+@keyframes popular-searches-scroll { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .popular-searches-window { overflow-x: auto; }
+  .popular-searches-track { animation: none; }
+  .popular-searches-group[aria-hidden="true"] { display: none; }
+}

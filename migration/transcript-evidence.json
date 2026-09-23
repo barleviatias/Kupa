@@ -1,0 +1,1366 @@
+{
+  "checkedAt": "2026-09-23",
+  "method": "Three distributed subtitle cues per episode (5+ Hebrew words), bounded 24-character gaps matched against existing MongoDB script. Spot-check identity evidence, not full alignment.",
+  "episodes": [
+    {
+      "_id": "בוקר של פיגוע_1_4",
+      "evidence": [
+        {
+          "startMs": 116720,
+          "matched": true
+        },
+        {
+          "startMs": 688360,
+          "matched": true
+        },
+        {
+          "startMs": 1230800,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "החולדה_1_9",
+      "evidence": [
+        {
+          "startMs": 110800,
+          "matched": true
+        },
+        {
+          "startMs": 729800,
+          "matched": true
+        },
+        {
+          "startMs": 1246560,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "כוכבה חוזרת מחו\"ל_1_7",
+      "evidence": [
+        {
+          "startMs": 154640,
+          "matched": true
+        },
+        {
+          "startMs": 712280,
+          "matched": true
+        },
+        {
+          "startMs": 1179000,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "נס בקצבייה_1_2",
+      "evidence": [
+        {
+          "startMs": 137880,
+          "matched": true
+        },
+        {
+          "startMs": 724680,
+          "matched": true
+        },
+        {
+          "startMs": 1229160,
+          "matched": false
+        }
+      ]
+    },
+    {
+      "_id": "סלב בסופר_1_5",
+      "evidence": [
+        {
+          "startMs": 114480,
+          "matched": true
+        },
+        {
+          "startMs": 607360,
+          "matched": true
+        },
+        {
+          "startMs": 1120840,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "ראמזי הבלש_1_6",
+      "evidence": [
+        {
+          "startMs": 178800,
+          "matched": true
+        },
+        {
+          "startMs": 741000,
+          "matched": true
+        },
+        {
+          "startMs": 1247480,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "ראמזי יוצא לחופש_1_10",
+      "evidence": [
+        {
+          "startMs": 139120,
+          "matched": true
+        },
+        {
+          "startMs": 664520,
+          "matched": false
+        },
+        {
+          "startMs": 1098280,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "ראמזי מאוהב_1_3",
+      "evidence": [
+        {
+          "startMs": 100600,
+          "matched": true
+        },
+        {
+          "startMs": 636680,
+          "matched": true
+        },
+        {
+          "startMs": 951280,
+          "matched": false
+        }
+      ]
+    },
+    {
+      "_id": "שלי מהבית_1_1",
+      "evidence": [
+        {
+          "startMs": 138400,
+          "matched": true
+        },
+        {
+          "startMs": 616400,
+          "matched": true
+        },
+        {
+          "startMs": 1125080,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "תחתונים_1_8",
+      "evidence": [
+        {
+          "startMs": 165120,
+          "matched": true
+        },
+        {
+          "startMs": 711480,
+          "matched": true
+        },
+        {
+          "startMs": 1209720,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "בני דודים_1_18",
+      "evidence": [
+        {
+          "startMs": 136000,
+          "matched": true
+        },
+        {
+          "startMs": 648320,
+          "matched": true
+        },
+        {
+          "startMs": 1091520,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "יום שישי בסופר_1_17",
+      "evidence": [
+        {
+          "startMs": 100960,
+          "matched": true
+        },
+        {
+          "startMs": 630400,
+          "matched": true
+        },
+        {
+          "startMs": 1045760,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "כוכבה מפסיקה לעשן_1_11",
+      "evidence": [
+        {
+          "startMs": 108440,
+          "matched": true
+        },
+        {
+          "startMs": 614280,
+          "matched": true
+        },
+        {
+          "startMs": 1080440,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "כרעיים יפים_1_12",
+      "evidence": [
+        {
+          "startMs": 88960,
+          "matched": true
+        },
+        {
+          "startMs": 589720,
+          "matched": true
+        },
+        {
+          "startMs": 957560,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "מהפכה בסופר חלק א'_1_14",
+      "evidence": [
+        {
+          "startMs": 154120,
+          "matched": true
+        },
+        {
+          "startMs": 699400,
+          "matched": true
+        },
+        {
+          "startMs": 1064520,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "מהפכה בסופר חלק ב'_1_15",
+      "evidence": [
+        {
+          "startMs": 200240,
+          "matched": true
+        },
+        {
+          "startMs": 729480,
+          "matched": true
+        },
+        {
+          "startMs": 1345080,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "סופר חכם חלק א'_1_19",
+      "evidence": [
+        {
+          "startMs": 134040,
+          "matched": true
+        },
+        {
+          "startMs": 677280,
+          "matched": true
+        },
+        {
+          "startMs": 1039400,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "סופר חכם חלק ב'_1_20",
+      "evidence": [
+        {
+          "startMs": 98800,
+          "matched": true
+        },
+        {
+          "startMs": 433320,
+          "matched": true
+        },
+        {
+          "startMs": 968800,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "פפרני בשדות זרים_1_13",
+      "evidence": [
+        {
+          "startMs": 148600,
+          "matched": true
+        },
+        {
+          "startMs": 706520,
+          "matched": true
+        },
+        {
+          "startMs": 1125280,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "תירוצים תירוצים_1_16",
+      "evidence": [
+        {
+          "startMs": 142640,
+          "matched": true
+        },
+        {
+          "startMs": 782760,
+          "matched": true
+        },
+        {
+          "startMs": 1220400,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "אחות של ראמזי_2_2",
+      "evidence": [
+        {
+          "startMs": 177680,
+          "matched": true
+        },
+        {
+          "startMs": 830120,
+          "matched": true
+        },
+        {
+          "startMs": 1276160,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "בטיפול_2_8",
+      "evidence": [
+        {
+          "startMs": 156360,
+          "matched": true
+        },
+        {
+          "startMs": 683360,
+          "matched": true
+        },
+        {
+          "startMs": 1268320,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "גזר_2_6",
+      "evidence": [
+        {
+          "startMs": 141520,
+          "matched": true
+        },
+        {
+          "startMs": 794200,
+          "matched": true
+        },
+        {
+          "startMs": 1313720,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "הדרבי הגדול_2_5",
+      "evidence": [
+        {
+          "startMs": 195160,
+          "matched": true
+        },
+        {
+          "startMs": 789880,
+          "matched": true
+        },
+        {
+          "startMs": 1246160,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "המרצדס_2_9",
+      "evidence": [
+        {
+          "startMs": 129480,
+          "matched": true
+        },
+        {
+          "startMs": 811960,
+          "matched": true
+        },
+        {
+          "startMs": 1259720,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "מה עובר על שירה?_2_3",
+      "evidence": [
+        {
+          "startMs": 149680,
+          "matched": true
+        },
+        {
+          "startMs": 798440,
+          "matched": true
+        },
+        {
+          "startMs": 1242160,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "סופר-פוד_2_4",
+      "evidence": [
+        {
+          "startMs": 179960,
+          "matched": true
+        },
+        {
+          "startMs": 660920,
+          "matched": true
+        },
+        {
+          "startMs": 1217080,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "סיפורי סבתא_2_7",
+      "evidence": [
+        {
+          "startMs": 200000,
+          "matched": true
+        },
+        {
+          "startMs": 777360,
+          "matched": true
+        },
+        {
+          "startMs": 1244160,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "פורים_2_10",
+      "evidence": [
+        {
+          "startMs": 215720,
+          "matched": true
+        },
+        {
+          "startMs": 750960,
+          "matched": true
+        },
+        {
+          "startMs": 1175720,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "שירותי הנהלה_2_1",
+      "evidence": [
+        {
+          "startMs": 226440,
+          "matched": true
+        },
+        {
+          "startMs": 793440,
+          "matched": true
+        },
+        {
+          "startMs": 1340200,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "אמנון לא מתנצל_2_15",
+      "evidence": [
+        {
+          "startMs": 157960,
+          "matched": true
+        },
+        {
+          "startMs": 751120,
+          "matched": true
+        },
+        {
+          "startMs": 1273160,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "אנטולי מתערב_2_11",
+      "evidence": [
+        {
+          "startMs": 180120,
+          "matched": true
+        },
+        {
+          "startMs": 761280,
+          "matched": true
+        },
+        {
+          "startMs": 1185960,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "הקרב על המזגן_2_13",
+      "evidence": [
+        {
+          "startMs": 191160,
+          "matched": true
+        },
+        {
+          "startMs": 756600,
+          "matched": true
+        },
+        {
+          "startMs": 1264480,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "חי ת'חלום_2_12",
+      "evidence": [
+        {
+          "startMs": 219960,
+          "matched": true
+        },
+        {
+          "startMs": 858120,
+          "matched": true
+        },
+        {
+          "startMs": 1246160,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "חמישים מיליון_2_18",
+      "evidence": [
+        {
+          "startMs": 146640,
+          "matched": true
+        },
+        {
+          "startMs": 799400,
+          "matched": true
+        },
+        {
+          "startMs": 1315280,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "מה עושים בלי כוכבה_2_20",
+      "evidence": [
+        {
+          "startMs": 217240,
+          "matched": true
+        },
+        {
+          "startMs": 837920,
+          "matched": true
+        },
+        {
+          "startMs": 1417000,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "מה עושים עם כוכבה_2_19",
+      "evidence": [
+        {
+          "startMs": 195560,
+          "matched": true
+        },
+        {
+          "startMs": 767680,
+          "matched": true
+        },
+        {
+          "startMs": 1289800,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "פסח בא_2_14",
+      "evidence": [
+        {
+          "startMs": 204480,
+          "matched": true
+        },
+        {
+          "startMs": 747640,
+          "matched": true
+        },
+        {
+          "startMs": 1183920,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "ראמזי ושודדי העגלות_2_17",
+      "evidence": [
+        {
+          "startMs": 161560,
+          "matched": true
+        },
+        {
+          "startMs": 652440,
+          "matched": true
+        },
+        {
+          "startMs": 1168720,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "שירה לא אחראית_2_16",
+      "evidence": [
+        {
+          "startMs": 196600,
+          "matched": true
+        },
+        {
+          "startMs": 729800,
+          "matched": true
+        },
+        {
+          "startMs": 1240480,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "15 דקות_3_3",
+      "evidence": [
+        {
+          "startMs": 109680,
+          "matched": true
+        },
+        {
+          "startMs": 676520,
+          "matched": true
+        },
+        {
+          "startMs": 1173520,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "בקבוק בלי פקק_3_1",
+      "evidence": [
+        {
+          "startMs": 121160,
+          "matched": true
+        },
+        {
+          "startMs": 772760,
+          "matched": true
+        },
+        {
+          "startMs": 1371680,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "הפצוע המולדבי_3_7",
+      "evidence": [
+        {
+          "startMs": 192800,
+          "matched": true
+        },
+        {
+          "startMs": 811160,
+          "matched": true
+        },
+        {
+          "startMs": 1281800,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "יולנדה_3_6",
+      "evidence": [
+        {
+          "startMs": 152320,
+          "matched": true
+        },
+        {
+          "startMs": 810920,
+          "matched": true
+        },
+        {
+          "startMs": 1320080,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "יומולדת בסופר_3_4",
+      "evidence": [
+        {
+          "startMs": 198280,
+          "matched": true
+        },
+        {
+          "startMs": 718480,
+          "matched": true
+        },
+        {
+          "startMs": 1225880,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "כוכבה היפה_3_5",
+      "evidence": [
+        {
+          "startMs": 149400,
+          "matched": true
+        },
+        {
+          "startMs": 808680,
+          "matched": true
+        },
+        {
+          "startMs": 1285320,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "סלסלות_3_8",
+      "evidence": [
+        {
+          "startMs": 121280,
+          "matched": true
+        },
+        {
+          "startMs": 671440,
+          "matched": true
+        },
+        {
+          "startMs": 1118720,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "סרגיי פלאץ'_3_10",
+      "evidence": [
+        {
+          "startMs": 183800,
+          "matched": true
+        },
+        {
+          "startMs": 807320,
+          "matched": true
+        },
+        {
+          "startMs": 1323040,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "עוד שישי בסופר_3_9",
+      "evidence": [
+        {
+          "startMs": 115360,
+          "matched": true
+        },
+        {
+          "startMs": 815840,
+          "matched": true
+        },
+        {
+          "startMs": 1246160,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "קוקו וקוקו_3_2",
+      "evidence": [
+        {
+          "startMs": 175800,
+          "matched": true
+        },
+        {
+          "startMs": 813840,
+          "matched": true
+        },
+        {
+          "startMs": 1312720,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "אבא של טיטינסקי_3_12",
+      "evidence": [
+        {
+          "startMs": 224520,
+          "matched": true
+        },
+        {
+          "startMs": 900760,
+          "matched": true
+        },
+        {
+          "startMs": 1376240,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "אמא של טיטינסקי_3_11",
+      "evidence": [
+        {
+          "startMs": 177160,
+          "matched": true
+        },
+        {
+          "startMs": 762280,
+          "matched": true
+        },
+        {
+          "startMs": 1306560,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "דקלה_3_13",
+      "evidence": [
+        {
+          "startMs": 249640,
+          "matched": true
+        },
+        {
+          "startMs": 882480,
+          "matched": true
+        },
+        {
+          "startMs": 1405280,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "חופה ראשית_3_20",
+      "evidence": [
+        {
+          "startMs": 156400,
+          "matched": true
+        },
+        {
+          "startMs": 607680,
+          "matched": true
+        },
+        {
+          "startMs": 1153320,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "חנוכה_3_19",
+      "evidence": [
+        {
+          "startMs": 224400,
+          "matched": true
+        },
+        {
+          "startMs": 928520,
+          "matched": true
+        },
+        {
+          "startMs": 1365680,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "מאשה חודש תשע_3_18",
+      "evidence": [
+        {
+          "startMs": 266760,
+          "matched": true
+        },
+        {
+          "startMs": 778800,
+          "matched": true
+        },
+        {
+          "startMs": 1281720,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "עקיצות_3_15",
+      "evidence": [
+        {
+          "startMs": 139360,
+          "matched": true
+        },
+        {
+          "startMs": 777320,
+          "matched": true
+        },
+        {
+          "startMs": 1359120,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "קקפונים_3_16",
+      "evidence": [
+        {
+          "startMs": 182840,
+          "matched": true
+        },
+        {
+          "startMs": 655440,
+          "matched": true
+        },
+        {
+          "startMs": 1157560,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "ראמזי טהור לעד_3_14",
+      "evidence": [
+        {
+          "startMs": 234560,
+          "matched": true
+        },
+        {
+          "startMs": 788080,
+          "matched": true
+        },
+        {
+          "startMs": 1271040,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "שוד ושבר_3_17",
+      "evidence": [
+        {
+          "startMs": 148440,
+          "matched": true
+        },
+        {
+          "startMs": 721080,
+          "matched": true
+        },
+        {
+          "startMs": 1444200,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "אבא של נעמי_4_6",
+      "evidence": [
+        {
+          "startMs": 143200,
+          "matched": true
+        },
+        {
+          "startMs": 852240,
+          "matched": true
+        },
+        {
+          "startMs": 1435000,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "בר מצווה אנטולי_4_4",
+      "evidence": [
+        {
+          "startMs": 130240,
+          "matched": true
+        },
+        {
+          "startMs": 695280,
+          "matched": true
+        },
+        {
+          "startMs": 1175520,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "האקדמיה ללשון_4_5",
+      "evidence": [
+        {
+          "startMs": 184680,
+          "matched": true
+        },
+        {
+          "startMs": 810880,
+          "matched": true
+        },
+        {
+          "startMs": 1249160,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "הג'ל של ראמזי_4_2",
+      "evidence": [
+        {
+          "startMs": 220640,
+          "matched": true
+        },
+        {
+          "startMs": 810600,
+          "matched": true
+        },
+        {
+          "startMs": 1255440,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "הלקוח הוא גם חבר_4_9",
+      "evidence": [
+        {
+          "startMs": 202720,
+          "matched": true
+        },
+        {
+          "startMs": 918040,
+          "matched": true
+        },
+        {
+          "startMs": 1357120,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "טיטינסקים לא קונים בעונה_4_3",
+      "evidence": [
+        {
+          "startMs": 225120,
+          "matched": true
+        },
+        {
+          "startMs": 713120,
+          "matched": true
+        },
+        {
+          "startMs": 1147040,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "לוויה ראשית א_4_10",
+      "evidence": [
+        {
+          "startMs": 154680,
+          "matched": true
+        },
+        {
+          "startMs": 932720,
+          "matched": true
+        },
+        {
+          "startMs": 1335320,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "מרד בר כוכבה_4_8",
+      "evidence": [
+        {
+          "startMs": 186080,
+          "matched": true
+        },
+        {
+          "startMs": 891480,
+          "matched": true
+        },
+        {
+          "startMs": 1279240,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "קופה אדומה_4_7",
+      "evidence": [
+        {
+          "startMs": 129000,
+          "matched": true
+        },
+        {
+          "startMs": 612600,
+          "matched": true
+        },
+        {
+          "startMs": 1037400,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "ריקוד מושחת_4_1",
+      "evidence": [
+        {
+          "startMs": 161040,
+          "matched": true
+        },
+        {
+          "startMs": 724360,
+          "matched": true
+        },
+        {
+          "startMs": 1157200,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "אמנון עובד בסופר_4_18",
+      "evidence": [
+        {
+          "startMs": 205160,
+          "matched": true
+        },
+        {
+          "startMs": 744960,
+          "matched": true
+        },
+        {
+          "startMs": 1322400,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "אתגר המיקרו_4_15",
+      "evidence": [
+        {
+          "startMs": 195960,
+          "matched": true
+        },
+        {
+          "startMs": 839680,
+          "matched": true
+        },
+        {
+          "startMs": 1342320,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "הטוסט של גריאני_4_17",
+      "evidence": [
+        {
+          "startMs": 116960,
+          "matched": true
+        },
+        {
+          "startMs": 757960,
+          "matched": true
+        },
+        {
+          "startMs": 1202320,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "המחליפה_4_16",
+      "evidence": [
+        {
+          "startMs": 237160,
+          "matched": true
+        },
+        {
+          "startMs": 868280,
+          "matched": true
+        },
+        {
+          "startMs": 1387360,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "המשקיע_4_13",
+      "evidence": [
+        {
+          "startMs": 155440,
+          "matched": true
+        },
+        {
+          "startMs": 828280,
+          "matched": true
+        },
+        {
+          "startMs": 1360640,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "העורבים_4_12",
+      "evidence": [
+        {
+          "startMs": 135000,
+          "matched": true
+        },
+        {
+          "startMs": 696520,
+          "matched": true
+        },
+        {
+          "startMs": 1294680,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "הצתה מאוחרת_4_19",
+      "evidence": [
+        {
+          "startMs": 158560,
+          "matched": true
+        },
+        {
+          "startMs": 870760,
+          "matched": true
+        },
+        {
+          "startMs": 1315960,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "יום האהבה_4_14",
+      "evidence": [
+        {
+          "startMs": 169280,
+          "matched": true
+        },
+        {
+          "startMs": 798080,
+          "matched": true
+        },
+        {
+          "startMs": 1230960,
+          "matched": true
+        }
+      ]
+    },
+    {
+      "_id": "לוויה ראשית ב_4_11",
+      "evidence": [
+        {
+          "startMs": 129240,
+          "matched": false
+        },
+        {
+          "startMs": 779880,
+          "matched": false
+        },
+        {
+          "startMs": 1215160,
+          "matched": false
+        }
+      ]
+    },
+    {
+      "_id": "ראמזי חוזר הביתה_4_20",
+      "evidence": [
+        {
+          "startMs": 146960,
+          "matched": true
+        },
+        {
+          "startMs": 746840,
+          "matched": true
+        },
+        {
+          "startMs": 1361600,
+          "matched": true
+        }
+      ]
+    }
+  ]
+}

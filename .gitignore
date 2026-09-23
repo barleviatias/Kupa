@@ -9,8 +9,12 @@
 # testing
 /coverage
 
+# Local subtitle migration reports and proposed payloads (contain subtitle text)
+/.migration-output/
+
 # next.js
 /.next/
+/.next-dev/
 /out/
 
 # production
@@ -25,8 +29,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
-.env*.local
+# Environment files may contain credentials; only commit the example.
+.env
+.env.*
+!.env.example
 
 # vercel
 .vercel

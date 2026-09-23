@@ -1,0 +1,568 @@
+{
+  "capturedAt": "2026-09-23",
+  "database": "test",
+  "collection": "kupa",
+  "projection": "script excluded; not a backup",
+  "episodes": [
+    {
+      "_id": "שלי מהבית_1_1",
+      "episode_name": "שלי מהבית",
+      "episode_number": 1,
+      "season_number": 1,
+      "youtube_url": "https://www.youtube.com/watch?v=xcXpKgjBxVE"
+    },
+    {
+      "_id": "נס בקצבייה_1_2",
+      "episode_name": "נס בקצבייה",
+      "episode_number": 2,
+      "season_number": 1,
+      "youtube_url": "https://www.youtube.com/watch?v=S5LWUnuJ6HY"
+    },
+    {
+      "_id": "ראמזי מאוהב_1_3",
+      "episode_name": "ראמזי מאוהב",
+      "episode_number": 3,
+      "season_number": 1,
+      "youtube_url": "https://www.youtube.com/watch?v=D2BClPCAZ3M"
+    },
+    {
+      "_id": "בוקר של פיגוע_1_4",
+      "episode_name": "בוקר של פיגוע",
+      "episode_number": 4,
+      "season_number": 1,
+      "youtube_url": "https://www.youtube.com/watch?v=k9NevIGM8To"
+    },
+    {
+      "_id": "סלב בסופר_1_5",
+      "episode_name": "סלב בסופר",
+      "episode_number": 5,
+      "season_number": 1,
+      "youtube_url": "https://www.youtube.com/watch?v=-oJYZpYzxOg"
+    },
+    {
+      "_id": "ראמזי הבלש_1_6",
+      "episode_name": "ראמזי הבלש",
+      "episode_number": 6,
+      "season_number": 1,
+      "youtube_url": "https://www.youtube.com/watch?v=vim9BabC6cA"
+    },
+    {
+      "_id": "כוכבה חוזרת מחו\"ל_1_7",
+      "episode_name": "כוכבה חוזרת מחו\"ל",
+      "episode_number": 7,
+      "season_number": 1,
+      "youtube_url": "https://www.youtube.com/watch?v=rIziOWvoPFk"
+    },
+    {
+      "_id": "תחתונים_1_8",
+      "episode_name": "תחתונים",
+      "episode_number": 8,
+      "season_number": 1,
+      "youtube_url": "https://www.youtube.com/watch?v=F2zhYgwNElQ"
+    },
+    {
+      "_id": "החולדה_1_9",
+      "episode_name": "החולדה",
+      "episode_number": 9,
+      "season_number": 1,
+      "youtube_url": "https://www.youtube.com/watch?v=p5_B-W6bxa4"
+    },
+    {
+      "_id": "ראמזי יוצא לחופש_1_10",
+      "episode_name": "ראמזי יוצא לחופש",
+      "episode_number": 10,
+      "season_number": 1,
+      "youtube_url": "https://www.youtube.com/watch?v=yu3XjhkTrlk"
+    },
+    {
+      "_id": "כוכבה מפסיקה לעשן_1_11",
+      "episode_name": "כוכבה מפסיקה לעשן",
+      "episode_number": 11,
+      "season_number": 1,
+      "youtube_url": "https://www.youtube.com/watch?v=OI5TMh5C04M"
+    },
+    {
+      "_id": "כרעיים יפים_1_12",
+      "episode_name": "כרעיים יפים",
+      "episode_number": 12,
+      "season_number": 1,
+      "youtube_url": "https://www.youtube.com/watch?v=M3glzgR5NTw"
+    },
+    {
+      "_id": "פפרני בשדות זרים_1_13",
+      "episode_name": "פפרני בשדות זרים",
+      "episode_number": 13,
+      "season_number": 1,
+      "youtube_url": "https://www.youtube.com/watch?v=CnX9c2FlPIk"
+    },
+    {
+      "_id": "מהפכה בסופר חלק א'_1_14",
+      "episode_name": "מהפכה בסופר חלק א'",
+      "episode_number": 14,
+      "season_number": 1,
+      "youtube_url": "https://www.youtube.com/watch?v=xr7Cp6kuJVE"
+    },
+    {
+      "_id": "מהפכה בסופר חלק ב'_1_15",
+      "episode_name": "מהפכה בסופר חלק ב'",
+      "episode_number": 15,
+      "season_number": 1,
+      "youtube_url": "https://www.youtube.com/watch?v=IjColYfsthQ"
+    },
+    {
+      "_id": "תירוצים תירוצים_1_16",
+      "episode_name": "תירוצים תירוצים",
+      "episode_number": 16,
+      "season_number": 1,
+      "youtube_url": "https://www.youtube.com/watch?v=GXLGVYEd5kk"
+    },
+    {
+      "_id": "יום שישי בסופר_1_17",
+      "episode_name": "יום שישי בסופר",
+      "episode_number": 17,
+      "season_number": 1,
+      "youtube_url": "https://www.youtube.com/watch?v=xesT_Yj2dLU"
+    },
+    {
+      "_id": "בני דודים_1_18",
+      "episode_name": "בני דודים",
+      "episode_number": 18,
+      "season_number": 1,
+      "youtube_url": "https://www.youtube.com/watch?v=FfB6wDVyjjU"
+    },
+    {
+      "_id": "סופר חכם חלק א'_1_19",
+      "episode_name": "סופר חכם חלק א'",
+      "episode_number": 19,
+      "season_number": 1,
+      "youtube_url": "https://www.youtube.com/watch?v=eEfzI2lwveE"
+    },
+    {
+      "_id": "סופר חכם חלק ב'_1_20",
+      "episode_name": "סופר חכם חלק ב'",
+      "episode_number": 20,
+      "season_number": 1,
+      "youtube_url": "https://www.youtube.com/watch?v=vzcinCqpN9k"
+    },
+    {
+      "_id": "שירותי הנהלה_2_1",
+      "episode_name": "שירותי הנהלה",
+      "episode_number": 1,
+      "season_number": 2,
+      "youtube_url": "https://www.youtube.com/watch?v=cOgDVvpz-Ww"
+    },
+    {
+      "_id": "אחות של ראמזי_2_2",
+      "episode_name": "אחות של ראמזי",
+      "episode_number": 2,
+      "season_number": 2,
+      "youtube_url": "https://www.youtube.com/watch?v=83PqTMga2oM"
+    },
+    {
+      "_id": "מה עובר על שירה?_2_3",
+      "episode_name": "מה עובר על שירה?",
+      "episode_number": 3,
+      "season_number": 2,
+      "youtube_url": "https://www.youtube.com/watch?v=PBQZz1xuYK8"
+    },
+    {
+      "_id": "סופר-פוד_2_4",
+      "episode_name": "סופר-פוד",
+      "episode_number": 4,
+      "season_number": 2,
+      "youtube_url": "https://www.youtube.com/watch?v=eyAMuGeZ9RA"
+    },
+    {
+      "_id": "הדרבי הגדול_2_5",
+      "episode_name": "הדרבי הגדול",
+      "episode_number": 5,
+      "season_number": 2,
+      "youtube_url": "https://www.youtube.com/watch?v=bQzstRIfghQ"
+    },
+    {
+      "_id": "גזר_2_6",
+      "episode_name": "גזר",
+      "episode_number": 6,
+      "season_number": 2,
+      "youtube_url": "https://www.youtube.com/watch?v=sMR_--zYApg"
+    },
+    {
+      "_id": "סיפורי סבתא_2_7",
+      "episode_name": "סיפורי סבתא",
+      "episode_number": 7,
+      "season_number": 2,
+      "youtube_url": "https://www.youtube.com/watch?v=-itB3hpl7gQ"
+    },
+    {
+      "_id": "בטיפול_2_8",
+      "episode_name": "בטיפול",
+      "episode_number": 8,
+      "season_number": 2,
+      "youtube_url": "https://www.youtube.com/watch?v=ATx7nzqP-E4"
+    },
+    {
+      "_id": "המרצדס_2_9",
+      "episode_name": "המרצדס",
+      "episode_number": 9,
+      "season_number": 2,
+      "youtube_url": "https://www.youtube.com/watch?v=KK4zLYp_O6E"
+    },
+    {
+      "_id": "פורים_2_10",
+      "episode_name": "פורים",
+      "episode_number": 10,
+      "season_number": 2,
+      "youtube_url": "https://www.youtube.com/watch?v=yiIcldovEwI"
+    },
+    {
+      "_id": "אנטולי מתערב_2_11",
+      "episode_name": "אנטולי מתערב",
+      "episode_number": 11,
+      "season_number": 2,
+      "youtube_url": "https://www.youtube.com/watch?v=bHDB2916l_g"
+    },
+    {
+      "_id": "חי ת'חלום_2_12",
+      "episode_name": "חי ת'חלום",
+      "episode_number": 12,
+      "season_number": 2,
+      "youtube_url": "https://www.youtube.com/watch?v=m-OzT2AKQ7k"
+    },
+    {
+      "_id": "הקרב על המזגן_2_13",
+      "episode_name": "הקרב על המזגן",
+      "episode_number": 13,
+      "season_number": 2,
+      "youtube_url": "https://www.youtube.com/watch?v=pBWlYbHmkJ4"
+    },
+    {
+      "_id": "פסח בא_2_14",
+      "episode_name": "פסח בא",
+      "episode_number": 14,
+      "season_number": 2,
+      "youtube_url": "https://www.youtube.com/watch?v=QgAmuR_jabE"
+    },
+    {
+      "_id": "אמנון לא מתנצל_2_15",
+      "episode_name": "אמנון לא מתנצל",
+      "episode_number": 15,
+      "season_number": 2,
+      "youtube_url": "https://www.youtube.com/watch?v=XsVVGpb-X5E"
+    },
+    {
+      "_id": "שירה לא אחראית_2_16",
+      "episode_name": "שירה לא אחראית",
+      "episode_number": 16,
+      "season_number": 2,
+      "youtube_url": "https://www.youtube.com/watch?v=xF7oMsU5des"
+    },
+    {
+      "_id": "ראמזי ושודדי העגלות_2_17",
+      "episode_name": "ראמזי ושודדי העגלות",
+      "episode_number": 17,
+      "season_number": 2,
+      "youtube_url": "https://www.youtube.com/watch?v=JB2IySKvXfc"
+    },
+    {
+      "_id": "חמישים מיליון_2_18",
+      "episode_name": "חמישים מיליון",
+      "episode_number": 18,
+      "season_number": 2,
+      "youtube_url": "https://www.youtube.com/watch?v=wauwpe0FxEU"
+    },
+    {
+      "_id": "מה עושים עם כוכבה_2_19",
+      "episode_name": "מה עושים עם כוכבה",
+      "episode_number": 19,
+      "season_number": 2,
+      "youtube_url": "https://www.youtube.com/watch?v=Y6XR7sIvlzE"
+    },
+    {
+      "_id": "מה עושים בלי כוכבה_2_20",
+      "episode_name": "מה עושים בלי כוכבה",
+      "episode_number": 20,
+      "season_number": 2,
+      "youtube_url": "https://www.youtube.com/watch?v=sUk3HfSllFc"
+    },
+    {
+      "_id": "בקבוק בלי פקק_3_1",
+      "episode_name": "בקבוק בלי פקק",
+      "episode_number": 1,
+      "season_number": 3,
+      "youtube_url": "https://www.youtube.com/watch?v=vPHTo9NsnNI"
+    },
+    {
+      "_id": "קוקו וקוקו_3_2",
+      "episode_name": "קוקו וקוקו",
+      "episode_number": 2,
+      "season_number": 3,
+      "youtube_url": "https://www.youtube.com/watch?v=Er030BPnVl0"
+    },
+    {
+      "_id": "15 דקות_3_3",
+      "episode_name": "15 דקות",
+      "episode_number": 3,
+      "season_number": 3,
+      "youtube_url": "https://www.youtube.com/watch?v=NsjeEt1ZpqQ"
+    },
+    {
+      "_id": "יומולדת בסופר_3_4",
+      "episode_name": "יומולדת בסופר",
+      "episode_number": 4,
+      "season_number": 3,
+      "youtube_url": "https://www.youtube.com/watch?v=SJhz7KFE3Hg"
+    },
+    {
+      "_id": "כוכבה היפה_3_5",
+      "episode_name": "כוכבה היפה",
+      "episode_number": 5,
+      "season_number": 3,
+      "youtube_url": "https://www.youtube.com/watch?v=gnAyOSwMjEw"
+    },
+    {
+      "_id": "יולנדה_3_6",
+      "episode_name": "יולנדה",
+      "episode_number": 6,
+      "season_number": 3,
+      "youtube_url": "https://www.youtube.com/watch?v=3_p3Q293u44"
+    },
+    {
+      "_id": "הפצוע המולדבי_3_7",
+      "episode_name": "הפצוע המולדבי",
+      "episode_number": 7,
+      "season_number": 3,
+      "youtube_url": "https://www.youtube.com/watch?v=82jdHBw1pEE"
+    },
+    {
+      "_id": "סלסלות_3_8",
+      "episode_name": "סלסלות",
+      "episode_number": 8,
+      "season_number": 3,
+      "youtube_url": "https://www.youtube.com/watch?v=fwIN1UESTcc"
+    },
+    {
+      "_id": "עוד שישי בסופר_3_9",
+      "episode_name": "עוד שישי בסופר",
+      "episode_number": 9,
+      "season_number": 3,
+      "youtube_url": "https://www.youtube.com/watch?v=ii_P3Hc8AJo"
+    },
+    {
+      "_id": "סרגיי פלאץ'_3_10",
+      "episode_name": "סרגיי פלאץ'",
+      "episode_number": 10,
+      "season_number": 3,
+      "youtube_url": "https://www.youtube.com/watch?v=3RkC309_Ako"
+    },
+    {
+      "_id": "אמא של טיטינסקי_3_11",
+      "episode_name": "אמא של טיטינסקי",
+      "episode_number": 11,
+      "season_number": 3,
+      "youtube_url": "https://www.youtube.com/watch?v=FMk5wxwdkQc"
+    },
+    {
+      "_id": "אבא של טיטינסקי_3_12",
+      "episode_name": "אבא של טיטינסקי",
+      "episode_number": 12,
+      "season_number": 3,
+      "youtube_url": "https://www.youtube.com/watch?v=cUfwFKT4DvA"
+    },
+    {
+      "_id": "דקלה_3_13",
+      "episode_name": "דקלה",
+      "episode_number": 13,
+      "season_number": 3,
+      "youtube_url": "https://www.youtube.com/watch?v=q8Nq-xNxUjo"
+    },
+    {
+      "_id": "ראמזי טהור לעד_3_14",
+      "episode_name": "ראמזי טהור לעד",
+      "episode_number": 14,
+      "season_number": 3,
+      "youtube_url": "https://www.youtube.com/watch?v=iceLA7lhoEI"
+    },
+    {
+      "_id": "עקיצות_3_15",
+      "episode_name": "עקיצות",
+      "episode_number": 15,
+      "season_number": 3,
+      "youtube_url": "https://www.youtube.com/watch?v=b_cJIoOQCSw"
+    },
+    {
+      "_id": "קקפונים_3_16",
+      "episode_name": "קקפונים",
+      "episode_number": 16,
+      "season_number": 3,
+      "youtube_url": "https://www.youtube.com/watch?v=zf_bnvCIzeM"
+    },
+    {
+      "_id": "שוד ושבר_3_17",
+      "episode_name": "שוד ושבר",
+      "episode_number": 17,
+      "season_number": 3,
+      "youtube_url": "https://www.youtube.com/watch?v=ShyPwmDHUd0"
+    },
+    {
+      "_id": "מאשה חודש תשע_3_18",
+      "episode_name": "מאשה חודש תשע",
+      "episode_number": 18,
+      "season_number": 3,
+      "youtube_url": "https://www.youtube.com/watch?v=FOfV6mUDlfI"
+    },
+    {
+      "_id": "חנוכה_3_19",
+      "episode_name": "חנוכה",
+      "episode_number": 19,
+      "season_number": 3,
+      "youtube_url": "https://www.youtube.com/watch?v=H19Wp_kO6XQ"
+    },
+    {
+      "_id": "חופה ראשית_3_20",
+      "episode_name": "חופה ראשית",
+      "episode_number": 20,
+      "season_number": 3,
+      "youtube_url": "https://www.youtube.com/watch?v=bKd7dnnuNLo"
+    },
+    {
+      "_id": "ריקוד מושחת_4_1",
+      "episode_name": "ריקוד מושחת",
+      "episode_number": 1,
+      "season_number": 4,
+      "youtube_url": "https://www.youtube.com/watch?v=1czhcHL-YwA"
+    },
+    {
+      "_id": "הג'ל של ראמזי_4_2",
+      "episode_name": "הג'ל של ראמזי",
+      "episode_number": 2,
+      "season_number": 4,
+      "youtube_url": "https://www.youtube.com/watch?v=EaMcZYTxaDU"
+    },
+    {
+      "_id": "טיטינסקים לא קונים בעונה_4_3",
+      "episode_name": "טיטינסקים לא קונים בעונה",
+      "episode_number": 3,
+      "season_number": 4,
+      "youtube_url": "https://www.youtube.com/watch?v=GGBXF3mMrj4"
+    },
+    {
+      "_id": "בר מצווה אנטולי_4_4",
+      "episode_name": "בר מצווה אנטולי",
+      "episode_number": 4,
+      "season_number": 4,
+      "youtube_url": "https://www.youtube.com/watch?v=SQw9PRlZ60Q"
+    },
+    {
+      "_id": "האקדמיה ללשון_4_5",
+      "episode_name": "האקדמיה ללשון",
+      "episode_number": 5,
+      "season_number": 4,
+      "youtube_url": "https://www.youtube.com/watch?v=zyP0st9aW6w"
+    },
+    {
+      "_id": "אבא של נעמי_4_6",
+      "episode_name": "אבא של נעמי",
+      "episode_number": 6,
+      "season_number": 4,
+      "youtube_url": "https://www.youtube.com/watch?v=KK4zLYp_O6E"
+    },
+    {
+      "_id": "קופה אדומה_4_7",
+      "episode_name": "קופה אדומה",
+      "episode_number": 7,
+      "season_number": 4,
+      "youtube_url": "https://www.youtube.com/watch?v=lFvrjguieo0"
+    },
+    {
+      "_id": "מרד בר כוכבה_4_8",
+      "episode_name": "מרד בר כוכבה",
+      "episode_number": 8,
+      "season_number": 4,
+      "youtube_url": "https://www.youtube.com/watch?v=mxDzbynZTMU"
+    },
+    {
+      "_id": "הלקוח הוא גם חבר_4_9",
+      "episode_name": "הלקוח הוא גם חבר",
+      "episode_number": 9,
+      "season_number": 4,
+      "youtube_url": "https://www.youtube.com/watch?v=sYLlJjdKNS0"
+    },
+    {
+      "_id": "לוויה ראשית א_4_10",
+      "episode_name": "לוויה ראשית א",
+      "episode_number": 10,
+      "season_number": 4,
+      "youtube_url": "https://www.youtube.com/watch?v=bB-1vs2XBo8"
+    },
+    {
+      "_id": "לוויה ראשית ב_4_11",
+      "episode_name": "לוויה ראשית ב",
+      "episode_number": 11,
+      "season_number": 4,
+      "youtube_url": "https://www.youtube.com/watch?v=fbhM6mV2DGE"
+    },
+    {
+      "_id": "העורבים_4_12",
+      "episode_name": "העורבים",
+      "episode_number": 12,
+      "season_number": 4,
+      "youtube_url": "https://www.youtube.com/watch?v=gRrIBT6EVCI"
+    },
+    {
+      "_id": "המשקיע_4_13",
+      "episode_name": "המשקיע",
+      "episode_number": 13,
+      "season_number": 4,
+      "youtube_url": "https://www.youtube.com/watch?v=JUfVRoaHvDg"
+    },
+    {
+      "_id": "יום האהבה_4_14",
+      "episode_name": "יום האהבה",
+      "episode_number": 14,
+      "season_number": 4,
+      "youtube_url": "https://www.youtube.com/watch?v=6MRvKxhiJmg"
+    },
+    {
+      "_id": "אתגר המיקרו_4_15",
+      "episode_name": "אתגר המיקרו",
+      "episode_number": 15,
+      "season_number": 4,
+      "youtube_url": "https://www.youtube.com/watch?v=4T2lUsxZc50"
+    },
+    {
+      "_id": "המחליפה_4_16",
+      "episode_name": "המחליפה",
+      "episode_number": 16,
+      "season_number": 4,
+      "youtube_url": "https://www.youtube.com/watch?v=NSBysaSZ3jg"
+    },
+    {
+      "_id": "הטוסט של גריאני_4_17",
+      "episode_name": "הטוסט של גריאני",
+      "episode_number": 17,
+      "season_number": 4,
+      "youtube_url": "https://www.youtube.com/watch?v=dFg16e0vhuU"
+    },
+    {
+      "_id": "אמנון עובד בסופר_4_18",
+      "episode_name": "אמנון עובד בסופר",
+      "episode_number": 18,
+      "season_number": 4,
+      "youtube_url": "https://www.youtube.com/watch?v=9Ab0ieHY9rg"
+    },
+    {
+      "_id": "הצתה מאוחרת_4_19",
+      "episode_name": "הצתה מאוחרת",
+      "episode_number": 19,
+      "season_number": 4,
+      "youtube_url": "https://www.youtube.com/watch?v=GL2KeRhl5YY"
+    },
+    {
+      "_id": "ראמזי חוזר הביתה_4_20",
+      "episode_name": "ראמזי חוזר הביתה",
+      "episode_number": 20,
+      "season_number": 4,
+      "youtube_url": "https://www.youtube.com/watch?v=kUgwDdxQ2i0"
+    }
+  ]
+}
