@@ -12,6 +12,8 @@ The `@/` alias points to the repository root.
 - `app/api/counter/route.js`: count of logged searches.
 - `app/api/top-searches/route.js`: all-time popular-search rankings.
 - `app/api/cron/warm-searches/route.js`: weekly MongoDB result-cache refresh.
+- `vercel.json`: weekly cache refresh and an independent weekly `/api/counter`
+  request that keeps an idle Atlas Free cluster active.
 - `proxy.js`: development-only localhost redirect for YouTube embeds.
 - `app/layout.js`, `app/globals.css`, `tailwind.config.js`: layout and styling.
 

@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import YoutubePlayer from './youtubePlayer';
 import { normalize, searchVariants, youtubeId, playbackSeconds, formatTime } from '@/lib/subtitle-search.mjs';
@@ -16,6 +16,7 @@ function HighlightedQuote({ text, query }) {
 
 function ResultItem({ item, query }) {
   const [expanded, setExpanded] = useState(false);
+  const [shareState, setShareState] = useState('idle');
   const [selection, setSelection] = useState({ start: 0, revision: 0 });
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1, rootMargin: '200px 0px' });
   const player = useRef(null);
@@ -26,8 +27,28 @@ function ResultItem({ item, query }) {
     setSelection(previous => ({ start: playbackSeconds(match.playbackStartMs), revision: previous.revision + 1 }));
     requestAnimationFrame(() => player.current?.scrollIntoView({ behavior: 'smooth', block: 'center' }));
   };
+  const share = async () => {
+    const url = new URL(window.location.href);
+    url.search = new URLSearchParams({ q: query }).toString();
+    url.hash = `episode-${encodeURIComponent(item._id)}`;
+    const text = matches[0]?.text || title;
+    if (navigator.share) {
+      try {
+        await navigator.share({ title, text, url: url.toString() });
+        return;
+      } catch (error) {
+        if (error.name === 'AbortError') return;
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(`${title}\n${text}\n${url}`);
+      setShareState('copied');
+    } catch {
+      setShareState('error');
+    }
+  };
   return (
-    <article className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-lg">
+    <article id={`episode-${encodeURIComponent(item._id)}`} className="scroll-mt-4 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-lg">
       <div ref={player} className="relative aspect-video w-full overflow-hidden bg-gray-900">
         <div ref={ref} className="absolute inset-0">
           {videoId ? <>
@@ -65,12 +86,20 @@ function ResultItem({ item, query }) {
             </li>
           ))}
         </ul>
-        {matches.length > 1 && (
-          <button type="button" aria-expanded={expanded} onClick={() => setExpanded(value => !value)}
-            className="mt-4 text-sm font-semibold text-custom-red hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-custom-red">
-            {expanded ? 'הסתר אזכורים' : `הצג עוד ${matches.length - 1} אזכורים`}
+        <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
+          {matches.length > 1 ? (
+            <button type="button" aria-expanded={expanded} onClick={() => setExpanded(value => !value)}
+              className="text-sm font-semibold text-custom-red hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-custom-red">
+              {expanded ? 'הסתר אזכורים' : `הצג עוד ${matches.length - 1} אזכורים`}
+            </button>
+          ) : <span />}
+          <button type="button" onClick={share}
+            className="inline-flex items-center gap-2 rounded-lg border border-gray-200 px-3 py-2 text-sm font-semibold text-gray-700 hover:border-custom-red hover:text-custom-red focus-visible:outline focus-visible:outline-2 focus-visible:outline-custom-red">
+            <i className="fa-solid fa-share-nodes" aria-hidden="true" />
+            {shareState === 'copied' ? 'הועתק!' : 'שתפו'}
           </button>
-        )}
+        </div>
+        {shareState === 'error' && <p role="alert" className="mt-2 text-sm text-custom-red">לא ניתן להעתיק את הקישור כרגע.</p>}
       </div>
     </article>
   );
@@ -85,6 +114,12 @@ export default function ResultsList({ resultsData, query }) {
       ? Number(a.season_number) - Number(b.season_number) || Number(a.episode_number) - Number(b.episode_number)
       : (b.matches?.length || b.context?.length || 0) - (a.matches?.length || a.context?.length || 0)
         || Number(a.season_number) - Number(b.season_number) || Number(a.episode_number) - Number(b.episode_number));
+  useEffect(() => {
+    const target = resultsData.find(item => window.location.hash === `#episode-${encodeURIComponent(item._id)}`);
+    if (!target) return;
+    const frame = requestAnimationFrame(() => document.getElementById(`episode-${encodeURIComponent(target._id)}`)?.scrollIntoView({ block: 'start' }));
+    return () => cancelAnimationFrame(frame);
+  }, [resultsData]);
   return <section aria-label="תוצאות החיפוש" className="max-w-6xl mx-auto">
     <div className="mb-6 flex w-full flex-wrap items-center gap-2 rounded-2xl border border-gray-200 bg-white p-2 shadow-sm sm:w-fit sm:gap-3 sm:p-3">
       <div className="grid w-full grid-cols-[minmax(0,2fr)_minmax(0,3fr)] gap-2 sm:flex sm:w-auto sm:gap-3">

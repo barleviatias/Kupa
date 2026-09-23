@@ -62,6 +62,11 @@ the shared MongoDB `search_cache` collection. Shared entries expire after eight
 days; a miss or cache failure falls back to live search. Every request still
 writes its own search event. Set `CRON_SECRET` in Vercel's production environment
 before deploying so Vercel can authenticate `/api/cron/warm-searches`.
+Independently, Vercel calls the read-only `/api/counter` route every Wednesday
+at 04:00 UTC. This touches MongoDB even when nobody searches and keeps an Atlas
+Free cluster active; it needs no secret because the counter route is already
+public. Check the Cron Jobs page and function logs if the cluster stops receiving
+traffic. The warmer still needs `CRON_SECRET` to run.
 
 A timestamp jump appears only when the episode has an enabled subtitle record
 and its `youtubeTiming` matches the subtitle hash and video ID. The historical
