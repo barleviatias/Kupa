@@ -81,7 +81,9 @@ It records the season-5 import and the steps to adapt for season 6. In particula
   read-back verification, and a private ignored report. Do not alter `test` or search logs.
 - The search API fails when the catalog exceeds 150 episodes. Check projected size before
   publishing more episodes, and adjust/test that bound deliberately if needed.
-- After an import, review `TIMESTAMP_EPISODE_IDS` and refresh the weekly popular-results
+- Approved database timing is enabled by default; unverified or stale timing stays disabled.
+  `TIMESTAMP_SEARCH_ENABLED=false` disables it, and optional `TIMESTAMP_EPISODE_IDS`
+  restricts it to that list. After an import, review any restriction and refresh the weekly popular-results
   cache so warmed searches include new episodes. The in-process search cache may take five
   minutes to expire. Update the UI's season range only after the new season is searchable.
 

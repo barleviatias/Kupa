@@ -70,8 +70,9 @@ in `lib/subtitle-import.mjs`.
    commands, counts, hashes, links, date and any exclusions in a new dated
    result note, without committing full subtitle text or credentials.
 6. Keep `youtubeTiming` unverified until the new episode's subtitle-to-video
-   offset is checked or explicitly approved. If timed search is enabled,
-   review `TIMESTAMP_EPISODE_IDS` and include new IDs only when intended.
+   offset is checked or explicitly approved. Approved timing is enabled by
+   default; if `TIMESTAMP_EPISODE_IDS` is set, review that explicit restriction
+   and include new IDs only when intended.
    Update the homepage season-range copy when season 6 is actually searchable.
    Refresh `/api/cron/warm-searches` with the configured `CRON_SECRET` after
    publishing so popular queries can include new episodes promptly; the

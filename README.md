@@ -15,8 +15,8 @@ React 19, Bun, Tailwind CSS and MongoDB.
 | --- | --- |
 | `MONGO_URI` | Server-only MongoDB connection string; required by database routes |
 | `MONGO_DB_NAME` | Database name; defaults to `kupa_prod` and overrides the URI database |
-| `TIMESTAMP_SEARCH_ENABLED` | Enables subtitle search for allowlisted episodes when `true` |
-| `TIMESTAMP_EPISODE_IDS` | Pipe-separated IDs of episodes allowed to use timed subtitles |
+| `TIMESTAMP_SEARCH_ENABLED` | Approved timing is enabled by default; `false` disables it |
+| `TIMESTAMP_EPISODE_IDS` | Optional pipe-separated episode restriction; absent uses approved database timing |
 | `CRON_SECRET` | Server-only secret authenticating the weekly cache refresh |
 
 Never commit credentials or put them in a `NEXT_PUBLIC_` variable. The example
@@ -71,7 +71,11 @@ traffic. The warmer still needs `CRON_SECRET` to run.
 A timestamp jump appears only when the episode has an enabled subtitle record
 and its `youtubeTiming` matches the subtitle hash and video ID. The historical
 approval to use zero Netflix offset applied to the previously imported
-99 episodes; it is not automatic for future episodes. The local development
+99 episodes; it is not automatic for future episodes. Approved database timing
+is used by default when timestamp variables are absent. Set
+`TIMESTAMP_SEARCH_ENABLED=false` to disable it, or set the optional pipe-separated
+`TIMESTAMP_EPISODE_IDS` to restrict episodes (an empty value disables all).
+The local development
 `proxy.js` redirects `127.0.0.1` to `localhost` because the numeric loopback
 origin produced YouTube embed error 150. This redirect does not run in production.
 

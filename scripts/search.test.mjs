@@ -5,6 +5,7 @@ import { createSearchHandler } from '../lib/search-handler.mjs';
 import { createConnectionCache } from '../lib/mongodb.mjs';
 import { createSearchResultsCache } from '../lib/search-cache.mjs';
 import { buildSubtitleFields } from '../lib/subtitle-import.mjs';
+import { searchConfig, searchConfigKey } from '../lib/search-service.mjs';
 
 function document() {
   const source = { netflixId: 'fixture', season: 3, episode: 6, sha256: 'hash', cueCount: 3,
@@ -89,6 +90,38 @@ test('feature and allowlist gate timed search; legacy preserves text', () => {
   assert.equal(legacyMatches('שָׁלוֹם, עולם!', 'שלום עולם')[0].text, 'שָׁלוֹם, עולם!');
   assert.equal(legacyMatches('שלום '.repeat(10000), 'שלום').length, 30);
   assert.deepEqual(legacyMatches('שלום', ''), []);
+});
+test('production defaults restore approved timing without enabling unverified episodes or stale caches', () => {
+  const previousFlag = process.env.TIMESTAMP_SEARCH_ENABLED;
+  const previousIds = process.env.TIMESTAMP_EPISODE_IDS;
+  try {
+    delete process.env.TIMESTAMP_SEARCH_ENABLED;
+    delete process.env.TIMESTAMP_EPISODE_IDS;
+    const config = searchConfig();
+    assert.deepEqual(config, { enabled: true, allowlist: null });
+    const doc = document();
+    assert.equal(searchDocuments([doc], 'שלום', config)[0].matches[0].playbackStartMs, 1000);
+    doc.youtubeTiming.status = 'assumed_netflix_zero';
+    assert.equal(searchDocuments([doc], 'שלום', config)[0].matches[0].playbackStartMs, 1000);
+    for (const timing of [{ status: 'unverified' }, { sourceHash: 'stale' }, { videoId: 'different' }]) {
+      const unapproved = document(); Object.assign(unapproved.youtubeTiming, timing);
+      assert.deepEqual(searchDocuments([unapproved], 'שלום', config), []);
+      assert.equal(searchDocuments([unapproved], 'משפט ישן', config)[0].matches[0].playbackStartMs, null);
+    }
+    const defaultKey = searchConfigKey();
+    process.env.TIMESTAMP_SEARCH_ENABLED = 'false';
+    assert.equal(searchDocuments([doc], 'שלום', searchConfig()).length, 0);
+    assert.notEqual(searchConfigKey(), defaultKey);
+    process.env.TIMESTAMP_SEARCH_ENABLED = 'true';
+    process.env.TIMESTAMP_EPISODE_IDS = '';
+    assert.equal(searchDocuments([doc], 'שלום', searchConfig()).length, 0);
+    assert.notEqual(searchConfigKey(), defaultKey);
+  } finally {
+    if (previousFlag === undefined) delete process.env.TIMESTAMP_SEARCH_ENABLED;
+    else process.env.TIMESTAMP_SEARCH_ENABLED = previousFlag;
+    if (previousIds === undefined) delete process.env.TIMESTAMP_EPISODE_IDS;
+    else process.env.TIMESTAMP_EPISODE_IDS = previousIds;
+  }
 });
 test('YouTube parsing rejects foreign hosts and supports common formats', () => {
   assert.equal(youtubeId('https://youtu.be/3_p3Q293u44?t=5'), '3_p3Q293u44');
